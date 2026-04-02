@@ -7,37 +7,39 @@
     line-height will take 22px as 1 and add 50% to it so that is more spacing between lines.
 */
 
+h1, h2, h3, h4, p, li {
+    font-family: sans-serif;
+}
+
 h1 {
     font-size: 26px;
-    font-family: sans-serif;
     text-transform: uppercase;
     font-style: italic;
 }
 
 h2 {
     font-size: 40px;
-    font-family: sans-serif;
 }
 
 h3 {
     font-size: 30px;
-    font-family: sans-serif;
 }
 
 h4 {
     font-size: 20px;
-    font-family: sans-serif;
     text-transform: uppercase;
     text-align: center;
 }
 
 p {
     font-size: 22px;
-    font-family: sans-serif;
     line-height: 1.5;
 }
 
 li {
     font-size: 20px;
-    font-family: sans-serif;
+}
+
+footer p {
+    font-size: 16px;
 }
