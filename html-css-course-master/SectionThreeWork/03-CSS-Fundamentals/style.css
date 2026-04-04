@@ -212,6 +212,10 @@ a:active {
 
     When you "inspect element" in the Developer Tools, if a styling is
     crossed out, it means that the styling is overridden by a more specific selector.
+
+    About the universal selector, *, applies the declared styling to all elements on the page.
+    However, unlike specifying styling in the <body></body> element, inheritance does not
+    apply to the universal selector.
 */
 #copyright {
     color: red;
