@@ -61,7 +61,7 @@ footer p {
 }
 
 .related {
-   list-style: none;
+    list-style: none;
 }
 
 .related-author {
@@ -77,4 +77,99 @@ aside {
     background-color: #f7f7f7;
     border-top: 5px solid #1098ad;
     border-bottom: 5px solid #1098ad;
+}
+
+/*
+We have to understand how this works, li:first-child selects
+all li elements which are the first child of their parent.
+
+li:last-child looks for the last li element which is the
+last child of its parent.  This works regardless of two
+lists are of different lengths.
+
+li:nth-child(n) looks for the nth li child which is the nth
+li element which is the nth child of its parent.  So if n = 2
+then CSS is looking for the 2nd li element which is the 2nd child of its parent.
+
+li:nth-child(odd) looks for all odd li elements, where the first element is the
+starting element.  If even then the second element is the starting element.
+*/
+li:first-child {
+    font-weight: bold;
+}
+
+li:last-child {
+    font-style: italic;
+}
+
+li:nth-child(2) {
+    /*color: red;*/
+}
+
+/*
+Below does not work as expected because p:first-child is not a valid selector.
+Instead, we can use article p:first-of-type to select the first paragraph
+within an article.  p:first-child selects the first child element of its parent
+THAT is a paragraph.  In this case the first child of the article is the header
+and not a paragraph, so this declaration block does not style any element.
+
+article p:first-child {
+    color: red;
+}
+This would work because the very last element of the article is a p-element.
+
+Using classes is generally preferred for defining the core appearance of elements
+because they decouple styling from the document structure, making the code less
+fragile if the HTML layout changes.  In contrast, pseudo-selectors are superior
+for adding interactive behaviors or styling specific parts of a document without
+modifying the HTML markup, such as changing a link's color only when it is
+visited (:visited) or styling the first letter of a paragraph (::first-letter).
+
+Classes are ideal for static, reusable styles (e.g., .btn-primary, .container) that
+apply to elements regardless of their context.
+Pseudo-selectors are necessary for conditional or structural styling
+(e.g., button:hover, li:nth-child(odd)) that relies on user interaction or the element's
+location in the DOM.
+Best Practice: Use classes for the base design and pseudo-selectors to handle
+state changes, interactions, and specific structural nuances to keep CSS clean
+and maintainable.
+
+The main point to take away from the discussion about classes versus pseudo-selectors
+is what I learned about CSS.  CSS should decouple styling from the document structure
+to make the code more maintainable and less fragile when the HTML layout changes.
+
+The author makes a good point li:first-child, li:nth-child(odd), and li:nth-child(even)
+are pseudo-selectors that allow for styling specific list items based on their position
+in the list.  These work because it almost always the case that for a list, whether
+<ul></ul> or <ol></ol> the child elements are <li></li>.
+
+a:link => very important targets <a></a> elements which have an href attribute.
+text-decoration => used to remove the underline from links.
+
+a:visited => targets <a></a> elements which have been visited (clicked) by the user.
+a:hover => targets <a></a> elements when the user hovers over them.
+
+The instructor makes another essential point a link must be styled in the exact
+order shown below.   The acronym is LVHA.
+
+CSS Theory: How does CSS resolve conflicts between selectors with the same specificity?
+*/
+a:link {
+    color: #1098ad;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #1098ad;
+}
+
+a:hover {
+    color: orangered;
+    font-weight: bold;
+    text-decoration: underline orangered;
+}
+
+a:active {
+    background-color: black;
+    font-style: italic;
 }
