@@ -7,10 +7,11 @@
     line-height will take 22px as 1 and add 50% to it so that is more spacing between lines.
 */
 
-h1, h2, h3, h4, p, li {
+body {
+    color: #444;
     font-family: sans-serif;
-    color: #444
 }
+
 
 h1, h2, h3 {
     color: #1098ad
@@ -153,6 +154,34 @@ The instructor makes another essential point a link must be styled in the exact
 order shown below.   The acronym is LVHA.
 
 CSS Theory: How does CSS resolve conflicts between selectors with the same specificity?
+
+Priorities:
+1.  ID selector overrides other styling, if there are multiple ID selectors for the
+same element then the last one defined in the CSS file will be applied.
+2.  Next in precedence is the class or pseudo-class selector, as with the ID
+selector, if there are multiple styles for the same element, the last one defined
+in the CSS file will be applied. 
+3.  Element selectors have the lowest precedence and are applied last, the pattern
+of selecting how the element is styled, if there are multiple styles for the same
+element, the last one defined in the CSS file will be applied. 
+4.  There is a universal selector and this always has the lowest precedence and is applied last.
+
+Just some additional notes by the Instructor, inline selectors have highest priority even over
+ID selectors.  This makes sense as the styling is embedded in the element.  Note such styling
+is only applied to the element which has the inline styling, not to other elements of the same type.
+
+There is one more selector that even supersedes inline styling and that is for declarations
+marked !important.  In CSS best practices this should not be used, it is a last resort to
+avoid specificity conflicts.
+
+
+p {
+    color: magenta; !important -> syntax for !important
+}
+
+An inherited property is very easily overridden by any declaration specific to that
+element.  As an example if we specify a text color in the <body></body> element then
+any rule specific to <p></p> elements will override it.
 */
 a:link {
     color: #1098ad;
@@ -172,4 +201,30 @@ a:hover {
 a:active {
     background-color: black;
     font-style: italic;
+}
+
+/*
+    Amazingly when hovering over a given CSS selector in Webstorm
+    the specificity of the element is given in the format (a, b, c),
+    so we know from the parenthetical rating which styling will be
+    applied to that element.
+
+
+    When you "inspect element" in the Developer Tools, if a styling is
+    crossed out, it means that the styling is overridden by a more specific selector.
+*/
+#copyright {
+    color: red;
+}
+
+.copyright {
+    color: blue;
+}
+
+.text {
+    color: yellow;
+}
+
+footer p {
+    color: green;
 }
