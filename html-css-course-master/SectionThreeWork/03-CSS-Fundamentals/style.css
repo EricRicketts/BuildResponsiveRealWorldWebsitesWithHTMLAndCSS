@@ -262,6 +262,11 @@ a:active {
     color: yellow;
 }
 
+.post-image {
+    width: 800px;
+    height: auto;
+}
+
 footer p {
     color: green;
 }
