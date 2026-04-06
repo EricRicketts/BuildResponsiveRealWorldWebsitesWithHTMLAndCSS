@@ -21,6 +21,7 @@ body {
 .main-header {
     background-color: #f7f7f7;
     padding: 20px 40px; /* 20px is top and bottom 40px is right and left */
+    margin-bottom: 60px; /* Margin at the bottom to separate the header from the content. */
 }
 
 aside {
