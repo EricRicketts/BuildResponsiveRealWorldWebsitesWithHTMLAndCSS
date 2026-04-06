@@ -1,0 +1,10 @@
+The CSS Box model defines how elements are displayed on the page and how they are sized.  All elements on a
+webpage can be located in a rectangular container which has:
+1.  Content -> specify height and width
+2.  Border -> inside the rectangular container
+3.  Padding -> spacing within the box, between the content and the border
+4.  Margin -> spacing outside the box, between the border and the next element, with two adjacent elements we
+only have to specify the margin for one of the elements
+5.  Fill Area -> Content, padding, and border.  Background color fills all three.
+6.  Final width of element = left border + left padding + element width + right padding + right border
+7.  Final height of element = lower border + lower padding + element height + top padding + top border

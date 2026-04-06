@@ -10,8 +10,19 @@
 body {
     color: #444;
     font-family: sans-serif;
+    border-top: 10px solid #1098ad;
 }
 
+.main-header {
+    background-color: #f7f7f7;
+    padding: 20px 40px; /* 20px is top and bottom 40px is right and left */
+}
+
+aside {
+    background-color: #f7f7f7;
+    border-top: 5px solid #1098ad;
+    border-bottom: 5px solid #1098ad;
+}
 
 h1, h2, h3 {
     color: #1098ad
@@ -70,16 +81,6 @@ footer p {
     font-weight: bold;
 }
 
-.main-header {
-    background-color: #f7f7f7
-}
-
-aside {
-    background-color: #f7f7f7;
-    border-top: 5px solid #1098ad;
-    border-bottom: 5px solid #1098ad;
-}
-
 /*
 We have to understand how this works, li:first-child selects
 all li elements which are the first child of their parent.
@@ -95,6 +96,7 @@ then CSS is looking for the 2nd li element which is the 2nd child of its parent.
 li:nth-child(odd) looks for all odd li elements, where the first element is the
 starting element.  If even then the second element is the starting element.
 */
+
 li:first-child {
     font-weight: bold;
 }
