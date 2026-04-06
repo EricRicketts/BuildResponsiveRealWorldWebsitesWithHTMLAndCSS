@@ -55,6 +55,11 @@ p {
 
 li {
     font-size: 20px;
+    margin-bottom: 10px; /* This helps space out the li elements as they were too close together in the lists */
+}
+
+li:last-child {
+    margin-bottom: 0; /* Removes extra margin from last li element */
 }
 
 /*
