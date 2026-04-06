@@ -20,9 +20,8 @@ body {
 
 .container { /* This declaration sets a maximum width for the container and centers it horizontally. */
     /* There will be equal margins on the left and the right, regardless of resizing, because of the auto values. */
-    width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 800px;
+    margin: 0 auto;
 }
 
 .main-header {
