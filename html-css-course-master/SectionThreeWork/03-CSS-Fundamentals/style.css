@@ -18,6 +18,13 @@ body {
     border-top: 10px solid #1098ad;
 }
 
+.container { /* This declaration sets a maximum width for the container and centers it horizontally. */
+    /* There will be equal margins on the left and the right, regardless of resizing, because of the auto values. */
+    width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 .main-header {
     background-color: #f7f7f7;
     padding: 20px 40px; /* 20px is top and bottom 40px is right and left */
