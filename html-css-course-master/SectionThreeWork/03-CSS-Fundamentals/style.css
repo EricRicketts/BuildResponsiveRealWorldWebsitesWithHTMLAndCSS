@@ -22,6 +22,7 @@ body {
     background-color: #f7f7f7;
     padding: 20px 40px; /* 20px is top and bottom 40px is right and left */
     margin-bottom: 60px; /* Margin at the bottom to separate the top header from the main content (article). */
+    height: 80px;
 }
 
 .post-header {
@@ -37,6 +38,7 @@ aside {
     border-top: 5px solid #1098ad;
     border-bottom: 5px solid #1098ad;
     padding: 50px 0; /* First number is the top and bottom and the second number is right and left. */
+    width: 500px;
 }
 
 h1, h2, h3 {
