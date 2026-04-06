@@ -7,6 +7,11 @@
     line-height will take 22px as 1 and add 50% to it so that is more spacing between lines.
 */
 
+* { /* Universal reset, this enables us to reset all default browser styles, so we have a clean slate to work with. */
+    margin: 0;
+    padding: 0;
+}
+
 body {
     color: #444;
     font-family: sans-serif;
