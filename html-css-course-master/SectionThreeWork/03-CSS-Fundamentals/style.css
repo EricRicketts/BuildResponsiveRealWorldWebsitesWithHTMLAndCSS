@@ -21,7 +21,11 @@ body {
 .main-header {
     background-color: #f7f7f7;
     padding: 20px 40px; /* 20px is top and bottom 40px is right and left */
-    margin-bottom: 60px; /* Margin at the bottom to separate the header from the content. */
+    margin-bottom: 60px; /* Margin at the bottom to separate the top header from the main content (article). */
+}
+
+.post-header {
+    margin-bottom: 40px; /* Margin at the bottom to separate the header of main content from the paragraphs below. */
 }
 
 aside {
@@ -43,6 +47,7 @@ h1 {
 
 h2 {
     font-size: 40px;
+    margin-bottom: 30px; /* Margin at the bottom to separate the h2 from the following content. */
 }
 
 h3 {
