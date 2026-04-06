@@ -28,6 +28,10 @@ body {
     margin-bottom: 40px; /* Margin at the bottom to separate the header of main content from the paragraphs below. */
 }
 
+article {
+    margin-bottom: 60px; /* Margin at the bottom to separate the main content from the aside. */
+}
+
 aside {
     background-color: #f7f7f7;
     border-top: 5px solid #1098ad;
