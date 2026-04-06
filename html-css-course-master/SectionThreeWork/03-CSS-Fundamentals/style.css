@@ -66,6 +66,11 @@ p {
     margin-bottom: 15px; /* Spread out the text so the text does not look so crowded. */
 }
 
+ul, ol {
+    margin-left: 50px; /* This was needed because the universal reset zeroed out the margins. */
+    margin-bottom: 20px; /* Give some separation between lists and following content. */
+}
+
 li {
     font-size: 20px;
     margin-bottom: 10px; /* This helps space out the li elements as they were too close together in the lists */
