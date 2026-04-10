@@ -9,3 +9,12 @@ spacing between two adjacent elements with overlapping margins.
 5.  Fill Area -> Content, padding, and border.  Background color fills all three.
 6.  Final width of element = left border + left padding + element width + right padding + right border
 7.  Final height of element = lower border + lower padding + element height + top padding + top border
+
+Second Challenge
+
+1.  Width of article is 825 pixels
+2.  It is centered in the page with equal white spacing on either side.
+3.  Use a global reset to remove margins and paddings.
+4.  Add back some of your own paddings and margins to make the website readable.
+5.  Button switches color when hovered over, in the hover mode add a border on the top.  The button spans the entire
+width of the page.
